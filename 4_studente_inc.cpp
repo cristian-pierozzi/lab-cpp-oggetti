@@ -5,7 +5,7 @@ using namespace std;
 
 /***********************************************************************************************************
  *                                 Modifica della classe studente (incapsulamento)                         *     
- *   Per come abbiamo definito la classe nel file "2_studente.cpp", è possibile inserire una media di 44:  *         
+ *   Per come abbiamo definito la classe nel file precedente, è possibile inserire una media di 44:  *         
  *   questo è concettualmente sbagliato, ma il programma non ci darà nessun errore se lo facciamo          *     
  *   Per evitare problemi di questo tipo, si preferisce                                                    *         
  *      1. modificare la "visibilità" dei campi della classe rendendoli privati                            *     
