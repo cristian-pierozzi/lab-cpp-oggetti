@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class portafoglio1 {
+private:
+    float valore;
+public:
+
+portafoglio1(){
+valore=3.00;
+}
+portafoglio1(float a){
+valore=a;}
+
+void stampa(){
+    cout<<"v="<<valore<<endl;
+}
+float aggiorna(float n,bool segno){
+    if (segno == 1){
+        valore+=n;
+    }
+    else
+        valore-=n;
+   return valore;
+}
+};
+int main()
+{
+    float v;
+    bool segno;
+
+    portafoglio1 P;
+    P.stampa();
+
+    cout<<"metti valore"<<endl;
+    cin>>v;
+
+    cout<<"metti il segno, 1 = +,0 = -"<<endl;
+    cin>>segno;
+
+     portafoglio1 P2(v);
+     P2.stampa();
+    cout<<P2.aggiorna(v,segno);
+
+    return 0;
+}
