@@ -37,14 +37,17 @@ public:
     // Metodo che modifica lo stato
     void cambiaPrezzo(double nuovoPrezzo) {
         // TODO inserire controllo affinchè il nuovo prezzo sia sempre maggiore di 0
-        prezzo = nuovoPrezzo;
+        if(nuovoPrezzo > 0)
+            prezzo = nuovoPrezzo;
     }
 
     // Metodo che applica uno sconto percentuale
     void applicaSconto(double percentuale) {
         // TODO inserire controllo affinchè la percentuale sia compresa tra 0 e 100
-        double sconto = prezzo * (percentuale / 100.0);
-        prezzo -= sconto;
+        if(percentuale >= 0 && percentuale <= 100) {
+            double sconto = prezzo * (percentuale / 100.0);
+            prezzo -= sconto;
+        }
     }
 };
 
