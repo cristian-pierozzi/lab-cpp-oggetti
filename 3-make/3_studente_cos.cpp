@@ -37,11 +37,13 @@ public:
     void setMedia(float nuovaMedia) {
         if(nuovaMedia >= 0 && nuovaMedia <= 10)
             media = nuovaMedia;
-        else cout << "Impossibile definire media perchè non compresa tra 0 e 10";
+        else
+            cout << "Impossibile definire media non compresa tra 0 e 10" << endl;
     }
 
-    void stampaStudente(){
-        cout << "Nome: " << nome << ", eta: " << eta << ", media: " << media << endl;
+    // funzione che stampa e basta
+    void stampa(){
+        cout << "Nome " << nome << " eta " << eta << " media " << media << endl;
     }
 };
 
@@ -49,6 +51,9 @@ int main()
 {
     // TODO Istanziare un oggetto tramite il costruttore 
 
+    Studente s("Marco", 17, 7.5);
+
+    s.stampa();
 
     return 0;
 }
