@@ -13,19 +13,30 @@ public:
     float media;
 
     void stampaStudente(){
-        cout << "Nome: " << nome << ", eta: " << eta << ", media: " << media << endl;
+        cout << "Nome " << nome << " eta " << eta << " media " << media << endl;
     }
 };
 
 int main()
 {
     /*********************** Creazione di oggetti ******************************/
-    // TODO Creare un nuovo studente "Mario" con eta 17 e media 7
-    // TODO Creare un nuovo studente "Maria"  (questa volta con un puntatore) con eta 18 e media 8
 
+    // Studente Mario
+    Studente mario;
+    mario.nome = "Mario";
+    mario.eta = 17;
+    mario.media = 7;
+
+    // Studente Maria con puntatore
+    Studente* maria = new Studente;
+    maria->nome = "Maria";
+    maria->eta = 18;
+    maria->media = 8;
 
     /************************** Visualizzazione ********************************/
-    // TODO Visualizzare il nome e la media sia di Mario che Maria
+
+    cout << "Nome " << mario.nome << " media " << mario.media << endl;
+    cout << "Nome " << maria->nome << " media " << maria->media << endl;
 
     return 0;
 }
