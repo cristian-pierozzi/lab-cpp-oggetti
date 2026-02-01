@@ -32,11 +32,25 @@ public:
     void setMedia(float nuovaMedia) {
         if(nuovaMedia >= 0 && nuovaMedia <= 10)
             media = nuovaMedia;
-        else cout << "Impossibile definire media perchè non compresa tra 0 e 10";
+        else
+            cout << "Impossibile definire media non compresa tra 0 e 10" << endl;
+    }
+
+    // funzioni GET
+    string getNome() {
+        return nome;
+    }
+
+    int getEta() {
+        return eta;
+    }
+
+    float getMedia() {
+        return media;
     }
 
     void stampaStudente(){
-        cout << "Nome: " << nome << ", eta: " << eta << ", media: " << media << endl;
+        cout << "Nome " << nome << " eta " << eta << " media " << media << endl;
     }
 };
 
@@ -44,8 +58,17 @@ int main()
 {
     // TODO Istanziare un nuovo oggetto e valorizzarlo attraverso i nuovi metodi set
 
+    Studente s;
+    s.setNome("Luca");
+    s.setEta(17);
+    s.setMedia(8);
+
     // TODO Adesso che gli attributi della classe sono privati, com'è possibile accedervi? 
     //      Risolvere il problema creando nuove funzioni "get" che permettano l'accesso a tutti gli attributi della classe
+
+    cout << "Nome " << s.getNome() << endl;
+    cout << "Eta " << s.getEta() << endl;
+    cout << "Media " << s.getMedia() << endl;
 
     return 0;
 }
